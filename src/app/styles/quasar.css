@@ -1,0 +1,14 @@
+.flex-nowrap {
+    flex-wrap: nowrap !important;
+}
+
+.q-focus-helper {
+    border: 1px solid var(--color--grey-375) !important;
+}
+
+.q-btn--rectangle {
+    border-radius: 32px !important;
+}
+.q-btn {
+    text-transform: none !important;
+}

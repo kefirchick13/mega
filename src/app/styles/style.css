@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: Helvetica, sans-serif !important;
+}
+* {
+    box-sizing: border-box !important;
+}
+
+#app {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 48px !important;
+    font-weight: 400 !important ;
+    line-height: 64px !important;
+}
+
+h2 {
+    font-size: 32px !important;
+    font-weight: 400 !important;
+    line-height: 42px !important;
+}
+
+h3 {
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    line-height: 32px !important;
+}
+
+h4 {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 28px !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+svg,
+button,
+span {
+    color: #1a1a1a;
+}

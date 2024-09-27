@@ -1,0 +1,1 @@
+export {default as ServiceItemIcon } from './SeviceItemIcon.vue'
