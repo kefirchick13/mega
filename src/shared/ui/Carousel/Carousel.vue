@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import ArrowRight from 'src/shared/assets/icons/arrow-right.svg'
+
 interface IProps {
     items: {
         name: string
@@ -45,13 +46,13 @@ const prev = () => {
                     @click="prev"
                     class="p-[15px] bg__secondary h-[48px] w-[48px] rounded-full"
                 >
-                    <ArrowRight class="rotate-180"></ArrowRight>
+                    <ArrowRight class="rotate-180" />
                 </button>
                 <button
                     @click="next"
                     class="p-[15px] bg__secondary h-[48px] w-[48px] rounded-full"
                 >
-                    <ArrowRight></ArrowRight>
+                    <ArrowRight />
                 </button>
             </div>
         </div>

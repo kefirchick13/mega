@@ -107,6 +107,4 @@ const isEvenRow = (rowIndex: number) => rowIndex % 2 === 1
     flex: 1; 
     height: 410px;
 }
-
-
 </style>

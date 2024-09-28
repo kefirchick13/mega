@@ -6,9 +6,21 @@
     border: 1px solid var(--color--grey-375) !important;
 }
 
+
 .q-btn--rectangle {
     border-radius: 32px !important;
 }
+
 .q-btn {
     text-transform: none !important;
+    box-shadow: none !important;
+    background-color: var(--color--grey-25) !important;
+}
+
+.q-btn::before {
+    box-shadow: none !important;
+}
+
+.q-btn--outline:before {
+    border-color: var(--color--grey-375) !important;
 }
