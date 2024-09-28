@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import MainPageLanding from '../../widgets/MainPageLanding/MainPageLanding.vue'
-import { ServicesScreen } from '@/features'
-import { ProjectsScreen } from '@/features'
-import { Carousel } from '@/shared/ui'
+import { ServicesScreen } from 'src/features'
+import { ProjectsScreen } from 'src/features'
+import { Carousel } from 'src/shared/ui'
 import { QBtn } from 'quasar'
 import { AnswerBlocks } from 'src/widgets/AnswerBlocks'
 import { IAnswer } from 'src/shared/types/answer'
@@ -101,7 +101,7 @@ const answers = ref<IAnswer[]>([
     <div class="w-full container">
         <MainPageLanding />
         <h2 class="mb-[48px]">Наши услуги</h2>
-        <ServicesScreen></ServicesScreen>
+        <ServicesScreen />
         <h2 class="">Наши проекты</h2>
         <p class="text__light-secondary">
             То, чего мы не стыдимся. Наша гордость и усилия.

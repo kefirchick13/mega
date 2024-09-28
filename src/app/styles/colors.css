@@ -1,13 +1,18 @@
-body{
---color--grey-525: rgba(26, 26, 26, 0.64);
---color--grey-375: rgba(102, 102, 102, 0.16);
---color--grey-25: #F7F7F7;
+body {
+    --color--grey-525: rgba(26, 26, 26, 0.64);
+    --color--grey-375: rgba(102, 102, 102, 0.16);
+    --color--grey-25: #F7F7F7;
 }
 
-.bg__secondary{
+.bg__secondary {
     background-color: var(--color--grey-25);
-    
+
 }
-.text__light-secondary{
+
+.text__light-primary {
+    color: #1A1A1A;
+}
+
+.text__light-secondary {
     color: var(--color--grey-525);
 }
