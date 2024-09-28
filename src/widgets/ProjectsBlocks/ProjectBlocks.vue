@@ -77,9 +77,18 @@ const isEvenRow = (rowIndex: number) => rowIndex % 2 === 1
 </script>
 
 <template>
-    <div class="table container">
-        <div v-for="(row, rowIndex) in rows" :key="rowIndex" class="row" >
-            <div v-for="(item, itemIndex) in row" :key="itemIndex" class="cell" :class="{'two': isOddRow(rowIndex) }">
+    <div class="table">
+        <div
+            v-for="(row, rowIndex) in rows"
+            :key="rowIndex"
+            class="row"
+        >
+            <div
+                v-for="(item, itemIndex) in row"
+                :key="itemIndex"
+                class="cell"
+                :class="{ two: isOddRow(rowIndex) }"
+            >
                 <ProjectBlockItem :project="item"></ProjectBlockItem>
             </div>
         </div>
@@ -96,7 +105,7 @@ const isEvenRow = (rowIndex: number) => rowIndex % 2 === 1
 
 .row {
     position: relative;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap !important;
     flex: 0 1 auto; /* Без возможности роста, с уменьшением, базовый размер — по содержимому */
@@ -104,7 +113,7 @@ const isEvenRow = (rowIndex: number) => rowIndex % 2 === 1
 }
 
 .cell {
-    flex: 1; 
+    width: 100%;
     height: 410px;
 }
 </style>

@@ -8,6 +8,7 @@ import { AnswerBlocks } from 'src/widgets/AnswerBlocks'
 import { IAnswer } from 'src/shared/types/answer'
 import { ref } from 'vue'
 import arrowRight from 'src/shared/assets/icons/arrow-right.svg'
+import { FeedBack } from 'src/widgets'
 
 const items = [
     {
@@ -98,15 +99,15 @@ const answers = ref<IAnswer[]>([
 ])
 </script>
 <template>
-    <div class="w-full container">
+    <div class="w-full px-[20px]">
         <MainPageLanding />
-        <h2 class="mb-[48px]">Наши услуги</h2>
+        <h2 class="mb-[48px] mt-[32px]">Наши услуги</h2>
         <ServicesScreen />
-        <h2 class="">Наши проекты</h2>
-        <p class="text__light-secondary">
+        <h2 class="mt-[32px]">Наши проекты</h2>
+        <p class="text__light-secondary mb-[48px]">
             То, чего мы не стыдимся. Наша гордость и усилия.
         </p>
-        <ProjectsScreen />
+        <ProjectsScreen class="w-full" />
         <div class="flex justify-center py-[32px]">
             <Carousel
                 header="Новости"
@@ -164,5 +165,6 @@ const answers = ref<IAnswer[]>([
                 >Весь блог<arrowRight class="ml-[8px]"
             /></QBtn>
         </div>
+        <FeedBack></FeedBack>
     </div>
 </template>

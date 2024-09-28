@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { QBtn, QIcon } from 'quasar';
+import { QBtn, QIcon } from 'quasar'
 import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 </script>
 <template>
@@ -7,18 +7,22 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
         <div class="container__article">
             <h1 class="">Построим, отремонтируем, обслужим.</h1>
             <p class="text__light-secondary">
-                Мы занимаемся строительством, ремонтом и обслуживанием зданий.
-                Мы выполняем работы разной сложности и обеспечиваем надежное
-                поддержание ваших объектов в хорошем состоянии.
+                Мы занимаемся строительством, ремонтом и обслуживанием
+                зданий. Мы выполняем работы разной сложности и
+                обеспечиваем надежное поддержание ваших объектов в
+                хорошем состоянии.
             </p>
-            <QBtn :outline="true" style="color: var(--color--grey-375); max-width: 330px;" size="md"><span class="text-[16px] normal-case	">Проконсультироваться по проекту</span><ArrowRight class="ml-[8px]"/></QBtn>
+            <QBtn :outline="true" style="max-width: 330px" size="md">
+                Проконсультироваться по проекту<ArrowRight
+                    class="ml-[8px]"
+            /></QBtn>
         </div>
-        <div class="container__image ">
-            <img src="" alt="" class="rounded-[16px] bg__secondary">
+        <div class="container__image">
+            <img src="" alt="" class="rounded-[16px] bg__secondary" />
         </div>
     </div>
 </template>
-<style scoped >
+<style scoped>
 .container {
     display: flex;
     gap: 32px;
@@ -36,14 +40,14 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
     font-size: 48px;
 }
 
-.container__image{
+.container__image {
     flex-basis: 100%;
     flex-shrink: 1;
+    min-height: 344px;
 }
-.container__image img{
+.container__image img {
     width: 100%;
     height: 100%;
     background-color: var(--color--grey-25);
-
 }
 </style>

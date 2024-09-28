@@ -1,48 +1,49 @@
 <script setup lang="ts">
 import { ServiceItemIcon } from 'src/shared'
 import { ref, watch, onMounted } from 'vue'
+import ArrowRight from 'src/shared/assets/icons/arrow-right.svg'
 
 // Пропсы для слайдов и видимых элементов
 const props = defineProps<{
-  slides: {name:string, img: string}[];
-  visibleSlides?: number;
-}>();
+    slides: { name: string; img: string }[]
+    visibleSlides?: number
+}>()
 
 // Устанавливаем количество видимых слайдов с дефолтом
-const visibleSlides = props.visibleSlides ?? 1;
+const visibleSlides = props.visibleSlides ?? 1
 
 // Референс на контейнер слайдов
-const carouselContainer = ref<HTMLElement | null>(null);
+const carouselContainer = ref<HTMLElement | null>(null)
 
 // Размер одного слайда (будет вычисляться динамически)
-let slideWidth = 0;
+let slideWidth = 0
 
 // Управление скроллом влево
 const scrollLeft = () => {
-  if (carouselContainer.value) {
-    carouselContainer.value.scrollLeft -= slideWidth;
-  }
-};
+    if (carouselContainer.value) {
+        carouselContainer.value.scrollLeft -= slideWidth
+    }
+}
 
 // Управление скроллом вправо
 const scrollRight = () => {
-  if (carouselContainer.value) {
-    carouselContainer.value.scrollLeft += slideWidth;
-  }
-};
+    if (carouselContainer.value) {
+        carouselContainer.value.scrollLeft += slideWidth
+    }
+}
 
 // После монтирования компонента вычисляем ширину одного слайда
 onMounted(() => {
-  if (carouselContainer.value) {
-    // Расчет ширины одного слайда (на основе общего размера контейнера и видимых слайдов)
-    slideWidth = carouselContainer.value.offsetWidth / visibleSlides;
-  }
-});
-
+    if (carouselContainer.value) {
+        // Расчет ширины одного слайда (на основе общего размера контейнера и видимых слайдов)
+        slideWidth =
+            carouselContainer.value.offsetWidth / visibleSlides
+    }
+})
 </script>
 
 <template>
-    <div class="flex flex-nowrap items-center justify-beetween ">
+    <div class="flex flex-nowrap items-center justify-beetween">
         <div class="slider-width max-w-[300%] overflow-hidden">
             <!-- Обертка слайдов -->
             <div
@@ -56,7 +57,9 @@ onMounted(() => {
                     :key="index"
                     class="snap-start"
                 >
-                    <ServiceItemIcon :service="service"></ServiceItemIcon>
+                    <ServiceItemIcon
+                        :service="service"
+                    ></ServiceItemIcon>
                 </div>
             </div>
         </div>
@@ -65,15 +68,15 @@ onMounted(() => {
         <div class="flex flex-nowrap gap-[16px]">
             <button
                 @click="scrollLeft"
-                class="w-[48px] h-[48px] bg__secondary rounded-full"
+                class="flex justify-center items-center w-[48px] h-[48px] bg__secondary rounded-full"
             >
-                &#10094;
+                <ArrowRight class="rotate-180" />
             </button>
             <button
                 @click="scrollRight"
-                class="w-[48px] h-[48px] bg__secondary rounded-full"
+                class="flex justify-center items-center w-[48px] h-[48px] bg__secondary rounded-full"
             >
-                &#10095;
+                <ArrowRight />
             </button>
         </div>
     </div>
@@ -91,24 +94,23 @@ onMounted(() => {
 }
 /* Скрытие полосы прокрутки (для кастомной прокрутки) */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE и Edge */
-  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 /* Плавный скролл */
 .scroll-smooth {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Snap для плавного прокручивания к слайдам */
 .snap-x {
-  scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
 }
 .snap-start {
-  scroll-snap-align: start;
+    scroll-snap-align: start;
 }
-
 </style>

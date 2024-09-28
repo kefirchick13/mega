@@ -4,8 +4,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'primary-text-color': 'var(text__light-primary)',
-                'secondary-text-color': 'var(text__light-secondary)',
+                blue: {
+                    500: '#0282FA',
+                },
             },
         },
     },

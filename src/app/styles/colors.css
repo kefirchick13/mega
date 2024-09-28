@@ -1,18 +1,27 @@
 body {
     --color--grey-525: rgba(26, 26, 26, 0.64);
+    --color--grey-500: #1a1a1a;
     --color--grey-375: rgba(102, 102, 102, 0.16);
-    --color--grey-25: #F7F7F7;
+    --color--grey-25: #f7f7f7;
+    --color--blue-500: #0282fa;
 }
 
 .bg__secondary {
     background-color: var(--color--grey-25);
-
 }
 
 .text__light-primary {
-    color: #1A1A1A;
+    color: var(--color--grey-500);
 }
 
 .text__light-secondary {
     color: var(--color--grey-525);
+}
+
+.text__grey-quarternary {
+    color: var(--color--grey-375);
+}
+
+.border__grey-quarternary {
+    border-color: var(--color--grey-375);
 }

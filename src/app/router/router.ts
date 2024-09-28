@@ -4,6 +4,7 @@ import BlogPage from 'src/pages/Blog/BlogPage.vue'
 import FAQPage from 'src/pages/FAQ/FAQPage.vue'
 
 const routes = [
+    { path: '/', redirect: '/main' },
     { path: '/main', component: MainPage },
     { path: '/blog', component: BlogPage },
     { path: '/questions', component: FAQPage },
