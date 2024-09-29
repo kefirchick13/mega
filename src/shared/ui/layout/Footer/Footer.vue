@@ -38,14 +38,14 @@ const news = ref<Ilink[]>([
 ])
 </script>
 <template>
-    <div class="flex gap-[32px] flex-nowrap my-[32px] px-[20px]">
+    <div class="flex gap-[32px] flex-nowrap py-[32px] px-[20px]">
         <div class="columns flex flex-nowrap flex-1 gap-[32px]">
             <div class="flex flex-col items-start">
                 <p>Компания</p>
                 <RouterLink
                     v-for="item in companyArray"
                     :to="item.link"
-                    class="text__light-secondary max-w-[148px] pb-[16px]"
+                    class="text__light-secondary max-w-[148px] truncate pb-[16px]"
                 >
                     <span>{{ item.name }}</span>
                 </RouterLink>
@@ -55,18 +55,18 @@ const news = ref<Ilink[]>([
                 <RouterLink
                     v-for="item in projects"
                     :to="item.link"
-                    class="text__light-secondary max-w-[148px] pb-[16px]"
+                    class="text__light-secondary max-w-[148px] truncate pb-[16px]"
                     :item="item.name"
                 >
                     <span>{{ item.name }}</span>
                 </RouterLink>
             </div>
             <div class="flex flex-col items-start">
-                <p>Социальные сети</p>
+                <p class="text-nowrap">Социальные сети</p>
                 <RouterLink
                     v-for="item in socialLinks"
                     :to="item.link"
-                    class="text__light-secondary max-w-[148px] pb-[16px]"
+                    class="text__light-secondary max-w-[148px] truncate pb-[16px]"
                 >
                     <span>{{ item.name }}</span>
                 </RouterLink>
@@ -76,7 +76,7 @@ const news = ref<Ilink[]>([
                 <RouterLink
                     v-for="item in news"
                     :to="item.link"
-                    class="text__light-secondary max-w-[148px] pb-[16px]"
+                    class="text__light-secondary max-w-[148px] truncate pb-[16px]"
                 >
                     <span>{{ item.name }}</span>
                 </RouterLink>

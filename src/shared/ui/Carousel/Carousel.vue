@@ -38,7 +38,7 @@ const prev = () => {
 </script>
 
 <template>
-    <div class="relative w-full">
+    <div class="relative w-full py-[32px]">
         <div class="flex justify-between mb-4 w-full items-center">
             <h2>{{ props.header }}</h2>
             <div class="flex gap-[16px]">

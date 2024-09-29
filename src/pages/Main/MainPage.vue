@@ -103,21 +103,26 @@ const answers = ref<IAnswer[]>([
         <MainPageLanding />
         <h2 class="mb-[48px] mt-[32px]">Наши услуги</h2>
         <ServicesScreen />
+        <div class="w-full text-center">
+            <QBtn :outline="true" size="md" class="normal-case"
+                >Все услуги <arrowRight class="ml-[8px]"
+            /></QBtn>
+        </div>
         <h2 class="mt-[32px]">Наши проекты</h2>
         <p class="text__light-secondary mb-[48px]">
             То, чего мы не стыдимся. Наша гордость и усилия.
         </p>
         <ProjectsScreen class="w-full" />
-        <div class="flex justify-center py-[32px]">
+        <div class="flex justify-center">
             <Carousel
                 header="Новости"
                 :items="items"
-                class="mb-[48px]"
+                class="mb-[16px]"
             ></Carousel>
             <QBtn
                 :outline="true"
                 size="md"
-                class="normal-case text-center"
+                class="normal-case text-center mb-[32px]"
                 >Больше новостей<arrowRight class="ml-[8px]"
             /></QBtn>
         </div>
@@ -156,7 +161,7 @@ const answers = ref<IAnswer[]>([
             <Carousel
                 header="Блог"
                 :items="items"
-                class="mb-[48px]"
+                class="mb-[16px]"
             ></Carousel>
             <QBtn
                 :outline="true"

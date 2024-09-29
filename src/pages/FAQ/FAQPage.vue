@@ -4,6 +4,8 @@ import FeedBack from 'src/widgets/FeedBack/FeedBack.vue'
 </script>
 
 <template>
-    <FAQScreen />
-    <FeedBack />
+    <div class="px-[20px]">
+        <FAQScreen />
+        <FeedBack />
+    </div>
 </template>
