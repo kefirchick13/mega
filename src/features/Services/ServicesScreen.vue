@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ServiceIconList from 'src/widgets/ServiceIconList/ServiceIconList.vue'
+import ServiceIconList from 'src/features/Services/components/ServiceIconList/ServiceIconList.vue'
 import { ref } from 'vue'
 import { ServiceBlocks } from 'src/widgets'
 import { QBtn } from 'quasar'

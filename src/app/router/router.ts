@@ -4,6 +4,7 @@ import BlogPage from 'src/pages/Blog/BlogPage.vue'
 import FAQPage from 'src/pages/FAQ/FAQPage.vue'
 import ProjectPage from 'src/pages/Projects/ProjectPage.vue'
 import ServicesPage from 'src/pages/Services/ServicesPage.vue'
+import NewsPage from 'src/pages/News/NewsPage.vue'
 
 const routes = [
     { path: '/', redirect: '/main' },
@@ -12,6 +13,7 @@ const routes = [
     { path: '/questions', component: FAQPage },
     { path: '/projects', component: ProjectPage },
     { path: '/services', component: ServicesPage },
+    { path: '/news', component: NewsPage },
 ]
 
 export const router = createRouter({

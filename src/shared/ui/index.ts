@@ -1,3 +1,3 @@
-export {ServiceItemIcon} from './ServiceItemIcon'
-export {ProjectBlockItem} from './ProjectBlockItem'
-export {Carousel} from './Carousel'
+export { ServiceItemIcon } from '../../features/Services/components/ServiceItemIcon'
+export { ProjectBlockItem } from '../../features/Projects/components/ProjectBlockItem'
+export { Carousel } from './Carousel'
