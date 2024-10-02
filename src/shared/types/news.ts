@@ -3,4 +3,5 @@ export interface INew {
     description?: string
     name: string
     date: string
+    id: number
 }

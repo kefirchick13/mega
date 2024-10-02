@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 console.log(route)
 const navLinks = [
-    { name: 'О компании', link: 'main' },
+    { name: 'О компании', link: '/about' },
     { name: 'Проекты', link: '/projects' },
     { name: 'Услуги', link: '/services' },
     { name: 'Новости', link: '/news' },
@@ -16,7 +16,9 @@ const navLinks = [
 </script>
 <template>
     <header class="header">
-        <HeaderLogo />
+        <RouterLink to="/main">
+            <HeaderLogo />
+        </RouterLink>
         <nav class="header-nav">
             <div
                 v-for="link in navLinks"

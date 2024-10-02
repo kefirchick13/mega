@@ -1,0 +1,1 @@
+export { AboutLanding } from './AboutLanding'

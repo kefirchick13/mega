@@ -8,8 +8,10 @@ interface IProps {
         description?: string
         date: string
         img: string
+        id: string
     }[]
     header: string
+    RouterLinkName: string
 }
 
 const props = defineProps<IProps>()
@@ -71,19 +73,28 @@ const prev = () => {
                         width: `calc((100% - 40px) / ${visibleSlides})`,
                     }"
                 >
-                    <img
-                        :src="project.img || ''"
-                        alt=""
-                        class="bg__secondary rounded-[16px] h-full relative flex-1 mb-[16px]"
-                    />
-                    <div>
-                        <h4 class="mb-[8px]">{{ project.name }}</h4>
-                        <p
-                            class="truncate max-w-[380px] text__light-secondary"
-                        >
-                            {{ project.date }}
-                        </p>
-                    </div>
+                    <RouterLink
+                        :to="{
+                            name: props.RouterLinkName,
+                            params: { id: project.id },
+                        }"
+                    >
+                        <img
+                            :src="project.img || ''"
+                            alt=""
+                            class="bg__secondary rounded-[16px] h-full relative flex-1 mb-[16px]"
+                        />
+                        <div>
+                            <h4 class="mb-[8px]">
+                                {{ project.name }}
+                            </h4>
+                            <p
+                                class="truncate max-w-[380px] text__light-secondary"
+                            >
+                                {{ project.date }}
+                            </p>
+                        </div>
+                    </RouterLink>
                 </div>
             </div>
         </div>

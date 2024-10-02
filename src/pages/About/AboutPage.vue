@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import FAQScreen from 'src/features/FAQ/FAQScreen.vue'
-import FeedBack from 'src/widgets/FeedBack/FeedBack.vue'
 import { Carousel } from 'src/shared'
-import { QBtn } from 'quasar'
-import arrowRight from 'src/shared/assets/icons/arrow-right.svg'
-
+import { FeedBack } from 'src/widgets'
+import { AboutLanding } from 'src/features/About'
 const items = [
     {
         name: 'Планы на Будущее: ООО "МЕГА" Анонсирует Новые Проекты на 2024 Год',
@@ -97,22 +94,15 @@ const items = [
 ]
 </script>
 <template>
-    <div class="px-[20px] max-w-[1408px] mx-auto">
-        <FAQScreen />
-        <div class="flex justify-center py-[32px]">
-            <Carousel
-                header="Блог"
-                :items="items"
-                class="mb-[16px]"
-                RouterLinkName="BlogTypePage"
-            ></Carousel>
-            <QBtn
-                :outline="true"
-                size="md"
-                class="normal-case text-center"
-                >Весь блог<arrowRight class="ml-[8px]"
-            /></QBtn>
-        </div>
+    <div
+        class="px-[20px] my-[32px] w-full flex flex-col gap-[48px] max-w-[1408px] mx-auto"
+    >
+        <AboutLanding />
+        <Carousel
+            :header="'Блог'"
+            RouterLinkName="BlogTypePage"
+            :items="items"
+        />
         <FeedBack />
     </div>
 </template>

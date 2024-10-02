@@ -3,6 +3,7 @@ body {
     --color--grey-500: #1a1a1a;
     --color--grey-375: rgba(102, 102, 102, 0.16);
     --color--grey-25: #f7f7f7;
+    --color--white-25: rgba(255, 255, 255, 0.64);
     --color--blue-500: #0282fa;
 }
 
@@ -20,6 +21,10 @@ body {
 
 .text__grey-quarternary {
     color: var(--color--grey-375);
+}
+
+.text__dark-secondary {
+    color: var(--color--white-25);
 }
 
 .border__grey-quarternary {

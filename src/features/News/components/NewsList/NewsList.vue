@@ -14,6 +14,7 @@ import NewsBlock from '../NewsBlock/NewsBlock.vue'
                     name: 'ООО `МЕГА` Завершает Амбициозный Проект Жилого Комплекса в Центре Москвы',
                     img: '',
                     date: '18 сентября, 2024',
+                    id: 7,
                 }"
             />
         </div>
