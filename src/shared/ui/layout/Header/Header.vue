@@ -1,35 +1,30 @@
 <script setup lang="ts">
-import HeaderLogo from '../../../assets/icons/HeaderLogo.svg'
 import { useRoute } from 'vue-router'
 
+import HeaderLogo from '../../../assets/icons/HeaderLogo.svg'
+import { NAV_LINKS } from './constant/navLinks'
+
 const route = useRoute()
-console.log(route)
-const navLinks = [
-    { name: 'О компании', link: '/about' },
-    { name: 'Проекты', link: '/projects' },
-    { name: 'Услуги', link: '/services' },
-    { name: 'Новости', link: '/news' },
-    { name: 'Блог', link: '/blog' },
-    { name: 'Частые вопросы', link: '/questions' },
-    { name: 'Контакты', link: '/contacts' },
-]
 </script>
 <template>
     <header class="header">
-        <RouterLink to="/main">
+        <router-link
+            class="hover:opacity-50 transition-all"
+            to="/main"
+        >
             <HeaderLogo />
-        </RouterLink>
+        </router-link>
         <nav class="header-nav">
             <div
-                v-for="link in navLinks"
+                v-for="link in NAV_LINKS"
                 class="header-nav__item"
                 :class="{
                     active: route.path.includes(link.link),
                 }"
             >
-                <RouterLink :to="link.link">
+                <router-link :to="link.link">
                     {{ link.name }}
-                </RouterLink>
+                </router-link>
             </div>
             <div class="header_nav-item">8 966 378-95-98</div>
         </nav>
