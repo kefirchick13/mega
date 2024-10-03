@@ -1,4 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {
+    createRouter,
+    createWebHistory,
+    RouteRecordRaw,
+} from 'vue-router'
 import MainPage from 'src/pages/Main/MainPage.vue'
 import BlogMainPage from 'src/pages/Blog/BlogMainPage.vue'
 import FAQPage from 'src/pages/FAQ/FAQPage.vue'
@@ -12,7 +16,7 @@ import ContactsPage from 'src/pages/Contacts/ContactsPage.vue'
 import News from 'src/pages/News/News.vue'
 import NewsTypePage from 'src/pages/News/NewsTypePage.vue'
 
-const routes = [
+const routes: RouteRecordRaw[] = [
     { path: '/', redirect: '/main' },
     { path: '/about', component: AboutPage },
     { path: '/contacts', component: ContactsPage },
