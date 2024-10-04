@@ -7,5 +7,5 @@ import Footer from './Footer/Footer.vue'
     <main class="flex justify-center">
         <slot />
     </main>
-    <Footer />
+    <!-- <Footer /> -->
 </template>

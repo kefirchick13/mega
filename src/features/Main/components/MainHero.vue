@@ -4,19 +4,19 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 </script>
 <template>
     <div class="container py-[32px]">
-        <div class="container__article">
-            <h1 class="">Построим, отремонтируем, обслужим.</h1>
+        <article class="container__article">
+            <h1>Построим, отремонтируем, обслужим.</h1>
             <p class="text__light-secondary">
                 Мы занимаемся строительством, ремонтом и обслуживанием
                 зданий. Мы выполняем работы разной сложности и
                 обеспечиваем надежное поддержание ваших объектов в
                 хорошем состоянии.`
             </p>
-            <QBtn outline style="max-width: 330px" size="md">
+            <QBtn outline class="main-page__btn" size="md">
                 Проконсультироваться по проекту
                 <ArrowRight class="ml-[8px]" />
             </QBtn>
-        </div>
+        </article>
         <div class="container__image">
             <img src="" alt="" class="rounded-[16px] bg__secondary" />
         </div>
@@ -24,8 +24,11 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 </template>
 <style scoped>
 .container {
-    display: flex;
-    gap: 32px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contaier .main-page__btn {
     width: 100%;
 }
 
@@ -37,19 +40,44 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
     flex-grow: 1;
 }
 
-.container__article h2 {
+.container__article h1 {
     font-size: 48px;
+    text-align: center;
+}
+
+.container__article p {
+    text-align: center;
+    font-size: 20px;
 }
 
 .container__image {
-    flex-basis: 100%;
-    flex-shrink: 1;
-    min-height: 344px;
+    display: none;
 }
 
-.container__image img {
-    width: 100%;
-    height: 100%;
-    background-color: var(--color--grey-25);
+@media (min-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .main-page__btn {
+        max-width: 380px;
+    }
+
+    .container__image {
+        display: block;
+        flex-basis: 100%;
+        flex-shrink: 1;
+        min-height: 344px;
+    }
+
+    .container__image img {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color--grey-25);
+    }
 }
 </style>

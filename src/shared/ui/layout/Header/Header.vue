@@ -3,6 +3,8 @@ import { useRoute } from 'vue-router'
 
 import HeaderLogo from '../../../assets/icons/HeaderLogo.svg'
 import { NAV_LINKS } from './constant/navLinks'
+import DesktopNavigation from './components/DesktopNavigation.vue'
+import MobileNavigation from './components/MobileNavigation.vue'
 
 const route = useRoute()
 </script>
@@ -14,22 +16,32 @@ const route = useRoute()
         >
             <HeaderLogo />
         </router-link>
-        <nav class="header-nav">
-            <div
-                v-for="link in NAV_LINKS"
-                class="header-nav__item"
-                :class="{
-                    active: route.path.includes(link.link),
-                }"
-            >
-                <router-link :to="link.link">
-                    {{ link.name }}
-                </router-link>
-            </div>
-            <div class="header_nav-item">8 966 378-95-98</div>
-        </nav>
+        <div class="desktop-nav">
+            <DesktopNavigation />
+        </div>
+        <div class="mobile-nav">
+            <MobileNavigation />
+        </div>
     </header>
 </template>
 <style>
 @import './style.css';
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-nav {
+    display: block;
+}
+
+@media (min-width: 1440px) {
+    .desktop-nav {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}
 </style>
