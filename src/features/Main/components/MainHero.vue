@@ -63,6 +63,14 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
         justify-content: space-between;
     }
 
+    .container__article h1 {
+        text-align: left;
+    }
+
+    .container__article p {
+        text-align: left;
+    }
+
     .main-page__btn {
         max-width: 380px;
     }
