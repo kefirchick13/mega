@@ -38,9 +38,9 @@ const news = ref<Ilink[]>([
 ])
 </script>
 <template>
-    <div class="flex gap-[32px] flex-nowrap py-[32px] px-[20px]">
-        <div class="columns flex flex-nowrap flex-1 gap-[32px]">
-            <div class="flex flex-col items-start">
+    <div class="flex lg:flex-row flex-col-reverse gap-[32px] flex-nowrap py-[32px] px-[20px] t">
+        <div class="columns flex flex-col  sm:flex-row flex-nowrap flex-1 gap-[32px]">
+            <div class="flex flex-col items-center sm:items-start">
                 <p>Компания</p>
                 <RouterLink
                     v-for="item in companyArray"
@@ -50,7 +50,7 @@ const news = ref<Ilink[]>([
                     <span>{{ item.name }}</span>
                 </RouterLink>
             </div>
-            <div class="flex flex-col items-start">
+            <div class="flex flex-col items-center sm:items-start">
                 <p>Проекты</p>
                 <RouterLink
                     v-for="item in projects"
@@ -61,7 +61,7 @@ const news = ref<Ilink[]>([
                     <span>{{ item.name }}</span>
                 </RouterLink>
             </div>
-            <div class="flex flex-col items-start">
+            <div class="flex flex-col items-center sm:items-start">
                 <p class="text-nowrap">Социальные сети</p>
                 <RouterLink
                     v-for="item in socialLinks"
@@ -71,7 +71,7 @@ const news = ref<Ilink[]>([
                     <span>{{ item.name }}</span>
                 </RouterLink>
             </div>
-            <div class="flex flex-col items-start">
+            <div class="flex flex-col items-center sm:items-start">
                 <p>Пресса</p>
                 <RouterLink
                     v-for="item in news"

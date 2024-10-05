@@ -1,62 +1,71 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { ProjectBlockItem } from 'src/shared/ui'
 
 interface IProject {
     img?: string
     name: string
     description: string
+    id: number
 }
 
-const items = [
+const items = ref<IProject[]>([
     {
         name: 'Остоженка 25 с.1',
         description:
             'Остоженка 25 — удобный офис в центре Москвы, где продумано всё для комфортной и эффективной работы.',
+        id: 7,
     },
     {
         name: 'Остоженка 25 с.1',
         description:
             'Остоженка 25 — удобный офис в центре Москвы, где продумано всё для комфортной и эффективной работы.',
+        id: 9,
     },
     {
         name: 'Остоженка 25 с.1',
         description:
             'Остоженка 25 — удобный офис в центре Москвы, где продумано всё для комфортной и эффективной работы.',
+        id: 11,
     },
     {
         name: 'Остоженка 25 с.1',
         description:
             'Остоженка 25 — удобный офис в центре Москвы, где продумано всё для комфортной и эффективной работы.',
+        id: 13,
     },
     {
         name: 'Остоженка 25 с.1',
         description:
             'Остоженка 25 — удобный офис в центре Москвы, где продумано всё для комфортной и эффективной работы.',
+        id: 15,
     },
     {
         name: 'Остоженка 25 с.1',
         description:
             'Остоженка 25 — удобный офис в центре Москвы, где продумано всё для комфортной и эффективной работы.',
+        id: 19,
     },
     {
         name: 'Остоженка 25 с.1',
         description:
             'Остоженка 25 — удобный офис в центре Москвы, где продумано всё для комфортной и эффективной работы.',
+        id: 21,
     },
     {
         name: 'Остоженка 25 с.1',
         description:
             'Остоженка 25 — удобный офис в центре Москвы, где продумано всё для комфортной и эффективной работы.',
+        id: 20,
     },
-]
+])
 
 // Функция для разбиения массива на строки по 2 и 3 элемента
 const rows = computed(() => {
     const result: IProject[][] = []
     let temp: IProject[] = []
 
-    items.forEach((item, index) => {
+    items.value.forEach((item, index) => {
         const isEvenRow = Math.floor(result.length) % 2 === 1 // четная строка
         const limit = isEvenRow ? 2 : 3
 
@@ -101,18 +110,32 @@ const isEvenRow = (rowIndex: number) => rowIndex % 2 === 1
 </template>
 
 <style scoped>
+@media (min-width: 640px) {
+    .table {
+        width: 1408px;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+
+    .row {
+        width: 1408px;
+        display: flex;
+        flex-wrap: nowrap !important;
+        flex: 0 1 auto; /* Без возможности роста, с уменьшением, базовый размер — по содержимому */
+        gap: 32px;
+    }
+}
+
 .table {
-    display: flex;
     width: 100%;
+    display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
 .row {
-    position: relative;
     width: 100%;
     display: flex;
-    flex-wrap: nowrap !important;
     flex: 0 1 auto; /* Без возможности роста, с уменьшением, базовый размер — по содержимому */
     gap: 32px;
 }

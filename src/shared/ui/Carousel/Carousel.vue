@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import ArrowRight from 'src/shared/assets/icons/arrow-right.svg'
 
 interface IProps {
@@ -19,6 +19,17 @@ const props = defineProps<IProps>()
 // Состояния карусели
 const currentSlide = ref(0)
 const visibleSlides = ref(3) // Можно изменить по умолчанию количество отображаемых слайдов
+
+const displayWidth = computed(() => {
+    return window.innerWidth
+})
+watch(
+    displayWidth,
+    (newVal) => {
+        visibleSlides.value = newVal <= 1024 ? 1 : 3
+    },
+    { immediate: true }
+)
 
 // Количество слайдов
 const totalSlides = computed(() =>
@@ -60,7 +71,7 @@ const prev = () => {
         </div>
         <div class="overflow-hidden w-full">
             <div
-                class="flex no-wrap transition-transform duration-300 carousel gap-[20px]"
+                class="flex no-wrap transition-transform duration-300 carousel lg:gap-[20px]"
                 :style="{
                     transform: `translateX(-${currentSlide * (100 / visibleSlides)}%)`,
                 }"
@@ -70,7 +81,7 @@ const prev = () => {
                     :key="index"
                     class="flex-shrink-0 carousel-item flex flex-col h-full relative block"
                     :style="{
-                        width: `calc((100% - 40px) / ${visibleSlides})`,
+                        width: `calc((100% - ${displayWidth <= 1024 ? 0 : 40}px) / ${visibleSlides})`,
                     }"
                 >
                     <RouterLink

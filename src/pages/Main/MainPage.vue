@@ -8,18 +8,20 @@ import {
     MainDescription,
     MainBlog,
 } from 'src/features/Main/components'
+
 import { FeedBack } from 'src/widgets'
 </script>
 
 <template>
     <div class="w-full px-[20px] max-w-[1408px] mx-auto">
         <MainHero />
-        <!-- <MainServices />
+        <MainServices />
         <MainProjects />
         <MainNews />
+        <!-- 
         <MainFaq />
         <MainDescription />
-        <MainBlog />
-        <FeedBack /> -->
+        <MainBlog />-->
+        <FeedBack />
     </div>
 </template>

@@ -43,7 +43,9 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex flex-nowrap items-center justify-beetween">
+    <div
+        class="flex flex-nowrap flex-col lg:flex-row items-center justify-beetween gap-[32px]"
+    >
         <div class="slider-width max-w-[300%] overflow-hidden">
             <!-- Обертка слайдов -->
             <div
@@ -88,10 +90,15 @@ onMounted(() => {
 .slide-leave-active {
     transition: opacity 0.5s;
 }
-
-.slider-width {
-    width: calc(100% - 48px * - 16px);
+@media (min-width: 1024px) {
+    .slider-width {
+        width: calc(100% - 48px * 2 - 16px -32px);
+    }
 }
+.slider-width {
+    width: 100%;
+}
+
 /* Скрытие полосы прокрутки (для кастомной прокрутки) */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
