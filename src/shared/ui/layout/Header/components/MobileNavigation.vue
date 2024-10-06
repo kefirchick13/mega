@@ -25,6 +25,7 @@ const toggleMenu = () => (isMenuOpened.value = !isMenuOpened.value)
                         v-for="navLink in NAV_LINKS"
                         :key="navLink.link"
                         class="text-center text-[32px] hover:opacity-50 transition-all"
+                        @click="toggleMenu"
                     >
                         <router-link :to="navLink.link">
                             {{ navLink.name }}

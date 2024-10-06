@@ -1,19 +1,11 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-
 import HeaderLogo from '../../../assets/icons/HeaderLogo.svg'
-import { NAV_LINKS } from './constant/navLinks'
 import DesktopNavigation from './components/DesktopNavigation.vue'
 import MobileNavigation from './components/MobileNavigation.vue'
-
-const route = useRoute()
 </script>
 <template>
     <header class="header">
-        <router-link
-            class="hover:opacity-50 transition-all"
-            to="/main"
-        >
+        <router-link class="hover:opacity-50 transition-all" to="/">
             <HeaderLogo />
         </router-link>
         <div class="desktop-nav">
