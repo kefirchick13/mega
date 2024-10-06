@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ProjectsScreen } from 'src/features'
 import { Carousel } from 'src/shared'
 import FeedBack from 'src/widgets/FeedBack/FeedBack.vue'
 import { QBtn } from 'quasar'
 import arrowRight from 'src/shared/assets/icons/arrow-right.svg'
+import ServicesScreen from 'src/features/Services/ServicesScreen.vue'
 
 const items = [
     {
@@ -97,32 +97,43 @@ const items = [
 ]
 </script>
 <template>
-    <div
-        class="w-full flex flex-col px-[20px] py-[32px] max-w-[1408px] mx-auto"
-    >
-        <div>
-            <h1 class="mb-[8px]">Наши проекты</h1>
+    <div class="w-full px-[20px] py-[32px] max-w-[1408px] mx-auto">
+        <div class="flex flex-col gap-[32px] mb-[48px]">
+            <h1 class="">Наши услуги</h1>
+            <p class="text__light-secondary mb-[0px]">
+                Наша компания предлагает полный спектр строительных
+                услуг – от проектирования и капитального ремонта до
+                комплексного строительства объектов любой сложности.
+                Мы обеспечиваем контроль на всех этапах, гарантируем
+                высокое качество работ и соблюдение сроков. Подробно
+                ознакомиться с каждым направлением вы можете ниже.
+            </p>
+            <div>
+                <QBtn
+                    :outline="true"
+                    size="md"
+                    class="normal-case text-center"
+                    >Проконсультироваться по услугам<arrowRight
+                        class="ml-[8px]"
+                /></QBtn>
+            </div>
         </div>
-        <p class="text__light-secondary mb-[48px]">
-            То, чего мы не стыдимся. Наша гордость и усилия.
-        </p>
-        <ProjectsScreen class="w-full" />
+        <ServicesScreen />
         <div class="w-full flex flex-col items-center pb-[32px]">
             <Carousel
                 header="Блог"
                 :items="items"
                 :RouterLinkName="'BlogTypePage'"
-            />
+            ></Carousel>
             <div>
                 <QBtn
+                    :outline="true"
                     size="md"
                     class="normal-case text-center"
-                    outline
-                    >Весь блог <arrowRight class="ml-[8px]" />
-                </QBtn>
+                    >Весь блог<arrowRight class="ml-[8px]"
+                /></QBtn>
             </div>
         </div>
         <FeedBack />
     </div>
 </template>
-<style scoped></style>

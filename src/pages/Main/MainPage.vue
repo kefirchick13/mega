@@ -19,9 +19,8 @@ import { FeedBack } from 'src/widgets'
         <MainProjects />
         <MainNews />
         <MainFaq />
-        <!--
         <MainDescription />
-        <MainBlog />-->
+        <MainBlog />
         <FeedBack />
     </div>
 </template>

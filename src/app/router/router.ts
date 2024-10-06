@@ -51,6 +51,7 @@ const routes: RouteRecordRaw[] = [
         path: '/projects',
         component: () => import('src/pages/Projects/Project.vue'),
         name: 'projects',
+        redirect: '/projects/main',
         children: [
             {
                 path: ':id',
@@ -71,6 +72,21 @@ const routes: RouteRecordRaw[] = [
         component: () =>
             import('src/pages/Services/ServicesPage.vue'),
         name: 'services',
+        redirect: '/services/main',
+        children: [
+            {
+                path: 'main',
+                component: () =>
+                    import('src/pages/Services/ServicesMainPage.vue'),
+                name: 'ServicesMainPage',
+            },
+            {
+                path: 'create',
+                component: () =>
+                    import('src/pages/Services/ServicesTypePage.vue'),
+                name: 'ServicesTypePage',
+            },
+        ],
     },
     {
         path: '/news',

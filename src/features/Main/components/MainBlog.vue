@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { QBtn } from 'quasar'
+import Carousel from 'src/shared/ui/Carousel/Carousel.vue'
 import { items } from '../mocks/items'
+import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 </script>
 
 <template>
@@ -13,7 +15,7 @@ import { items } from '../mocks/items'
         />
         <QBtn size="md" class="normal-case text-center" outline>
             <span>Весь блог</span>
-            <arrowRight class="ml-[8px]" />
+            <ArrowRight class="ml-[8px]" />
         </QBtn>
     </div>
 </template>

@@ -41,15 +41,15 @@ a {
 }
 
 h1 {
-    font-size: 48px !important;
-    font-weight: 400 !important;
-    line-height: 64px !important;
-}
-
-h2 {
     font-size: 32px !important;
     font-weight: 400 !important;
     line-height: 42px !important;
+}
+
+h2 {
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    line-height: 32px !important;
 }
 
 h3 {
@@ -62,6 +62,20 @@ h4 {
     font-size: 20px !important;
     font-weight: 400 !important;
     line-height: 28px !important;
+}
+
+@media (min-width: 640px) {
+    h1 {
+        font-size: 48px !important;
+        font-weight: 400 !important;
+        line-height: 64px !important;
+    }
+
+    h2 {
+        font-size: 32px !important;
+        font-weight: 400 !important;
+        line-height: 42px !important;
+    }
 }
 
 p,

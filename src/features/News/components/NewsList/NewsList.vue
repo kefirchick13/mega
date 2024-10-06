@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { date } from 'quasar'
 import NewsBlock from '../NewsBlock/NewsBlock.vue'
 </script>
 <template>
-    <div class="max-w-[1408px] mx-auto mb-[32px]">
+    <div class="max-w-[1408px] mb-[32px]">
         <div
-            class="flex flex-wrap justify-between gap-x-[32px] gap-y-[48px]"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[32px] gap-y-[48px]"
         >
             <NewsBlock
                 v-for="blog in 9"

@@ -10,23 +10,26 @@ const props = defineProps<IBlog>()
 </script>
 
 <template>
-    <RouterLink
-        :to="{
-            name: 'BlogTypePage',
-            params: { id: 7 },
-        }"
-    >
-        <div class="flex-1 shrink-0 min-w-[400px]">
+    <div class="">
+        <RouterLink
+            :to="{
+                name: 'BlogTypePage',
+                params: { id: 7 },
+            }"
+        >
             <img
                 :src="props.blog.img || ''"
                 alt=""
-                class="bg__secondary border-none outline-none rounded-[16px] h-[344px] mb-[16px]"
+                class="bg__secondary w-full object-cover relative rounded-[16px] h-[344px] mb-[16px]"
+                style="outline: none"
             />
             <div>
-                <h4 class="mb-[8px] text-[20px] leading-[23px]">
+                <h4
+                    class="mb-[8px] text-[20px] leading-[23px] max-w-[380px] truncate"
+                >
                     {{ props.blog.name }}
                 </h4>
             </div>
-        </div>
-    </RouterLink>
+        </RouterLink>
+    </div>
 </template>

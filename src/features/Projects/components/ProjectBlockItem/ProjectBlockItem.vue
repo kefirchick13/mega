@@ -10,7 +10,12 @@ interface IProps {
 const props = defineProps<IProps>()
 </script>
 <template>
-    <RouterLink :to="`/project/${props.project.id}`">
+    <RouterLink
+        :to="{
+            name: `ProjectTypePage`,
+            params: { id: props.project.id },
+        }"
+    >
         <div class="flex flex-col h-full relative w-full">
             <img
                 :src="project.img || ''"
@@ -20,7 +25,7 @@ const props = defineProps<IProps>()
             <div>
                 <h4 class="mb-[8px]">{{ project.name }}</h4>
                 <p
-                    class="truncate max-w-[420px] text__light-secondary"
+                    class="truncate sm:max-w-[420px] max-w-[280px] text__light-secondary"
                 >
                     {{ project.description }}
                 </p>
