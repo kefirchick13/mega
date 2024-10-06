@@ -97,7 +97,7 @@ const items = [
 ]
 </script>
 <template>
-    <div class="px-[20px] max-w-[1408px] mx-auto">
+    <div class="px-[20px] max-w-[1408px] mx-auto w-full">
         <FAQScreen />
         <div class="flex justify-center py-[32px]">
             <Carousel

@@ -127,14 +127,12 @@ const isEvenRow = (rowIndex: number) => rowIndex % 2 === 1
 }
 
 .table {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
 .row {
-    width: 100%;
     display: flex;
     flex: 0 1 auto; /* Без возможности роста, с уменьшением, базовый размер — по содержимому */
     gap: 32px;

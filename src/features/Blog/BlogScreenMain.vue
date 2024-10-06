@@ -62,7 +62,7 @@ import {
         <section>
             <div class="max-w-[1408px] mx-auto mb-[32px]">
                 <div
-                    class="flex flex-wrap justify-between gap-x-[32px] gap-y-[48px] mb-[48px]"
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[32px] gap-y-[48px] mb-[48px]"
                 >
                     <BlogItem
                         v-for="blog in 9"

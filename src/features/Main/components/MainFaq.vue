@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { QBtn } from 'quasar'
+import { AnswerBlocks } from 'src/features/FAQ/components/AnswerBlocks'
 import { answers } from '../mocks/answers'
 import arrowRight from '@/shared/assets/icons/arrow-right.svg'
 </script>
 
 <template>
     <div class="flex justify-center gap-[32px] py-[32px]">
-        <div class="flex justify-beetween flex-nowrap">
-            <h2 class="basis-2/5">Частые вопросы</h2>
+        <div
+            class="flex flex-col sm:flex-row justify-beetween flex-nowrap gap-[32px]"
+        >
+            <h2 class="sm:basis-2/5 text-center sm:text-start">
+                Частые вопросы
+            </h2>
             <AnswerBlocks :answers="answers" />
         </div>
         <QBtn :outline="true" size="md" class="normal-case"

@@ -3,9 +3,13 @@ import { QBtn } from 'quasar'
 import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 </script>
 <template>
-    <div class="container py-[32px]">
+    <div class="container py-[32px] mx-auto xl:mx-[0px]">
         <article class="container__article">
-            <h1>Построим, отремонтируем, обслужим.</h1>
+            <h1
+                class="text-[32px] leading-[42px] sm:leading-[64px] sm:text-[48px] text-center"
+            >
+                Построим, отремонтируем, обслужим.
+            </h1>
             <p class="text__light-secondary">
                 Мы занимаемся строительством, ремонтом и обслуживанием
                 зданий. Мы выполняем работы разной сложности и
@@ -35,14 +39,10 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 .container__article {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 32px;
     flex-shrink: 1;
     flex-grow: 1;
-}
-
-.container__article h1 {
-    font-size: 48px;
-    text-align: center;
 }
 
 .container__article p {

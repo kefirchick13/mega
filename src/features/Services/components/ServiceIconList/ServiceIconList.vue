@@ -5,7 +5,7 @@ import ArrowRight from 'src/shared/assets/icons/arrow-right.svg'
 
 // Пропсы для слайдов и видимых элементов
 const props = defineProps<{
-    slides: { name: string; img: string }[]
+    slides: { name: string; img: string; id: number }[]
     visibleSlides?: number
 }>()
 
