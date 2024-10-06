@@ -18,8 +18,8 @@ import { FeedBack } from 'src/widgets'
         <MainServices />
         <MainProjects />
         <MainNews />
-        <!-- 
         <MainFaq />
+        <!--
         <MainDescription />
         <MainBlog />-->
         <FeedBack />

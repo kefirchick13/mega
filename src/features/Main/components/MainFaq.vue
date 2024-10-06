@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { QBtn } from 'quasar'
 import { answers } from '../mocks/answers'
+import arrowRight from '@/shared/assets/icons/arrow-right.svg'
 </script>
 
 <template>
