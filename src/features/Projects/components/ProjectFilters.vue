@@ -5,6 +5,7 @@ import {
     QItem,
     QItemSection,
     QItemLabel,
+    QBtn,
 } from 'quasar'
 </script>
 <template>
@@ -33,13 +34,13 @@ import {
                 dropdown-icon="expand_more"
                 style="color: var(--color--grey-525)"
             >
-                <q-list>
-                    <q-item clickable v-close-popup>
-                        <q-item-section>
+                <QList>
+                    <QItem clickable v-close-popup>
+                        <QItemSection>
                             <q-item-label>Photos</q-item-label>
-                        </q-item-section>
-                    </q-item>
-                </q-list>
+                        </QItemSection>
+                    </QItem>
+                </QList>
             </QBtnDropdown>
             <QBtnDropdown
                 outline

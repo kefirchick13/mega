@@ -1,55 +1,93 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import MainPage from 'src/pages/Main/MainPage.vue'
-import BlogMainPage from 'src/pages/Blog/BlogMainPage.vue'
-import FAQPage from 'src/pages/FAQ/FAQPage.vue'
-import ProjectPage from 'src/pages/Projects/ProjectPage.vue'
-import ServicesPage from 'src/pages/Services/ServicesPage.vue'
-import NewsMainPage from 'src/pages/News/NewsMainPage.vue'
-import BlogTypePage from 'src/pages/Blog/BlogTypePage.vue'
-import Blog from 'src/pages/Blog/Blog.vue'
-import AboutPage from 'src/pages/About/AboutPage.vue'
-import ContactsPage from 'src/pages/Contacts/ContactsPage.vue'
-import News from 'src/pages/News/News.vue'
-import NewsTypePage from 'src/pages/News/NewsTypePage.vue'
+import {
+    createRouter,
+    createWebHistory,
+    RouteRecordRaw,
+} from 'vue-router'
 
-const routes = [
-    { path: '/', redirect: '/main' },
-    { path: '/about', component: AboutPage },
-    { path: '/contacts', component: ContactsPage },
-    { path: '/main', component: MainPage },
+const routes: RouteRecordRaw[] = [
+    {
+        path: '/',
+        component: () => import('src/pages/Main/MainPage.vue'),
+        name: 'home',
+    },
+
+    {
+        path: '/about',
+        component: () => import('src/pages/About/AboutPage.vue'),
+        name: 'about',
+    },
+    {
+        path: '/contacts',
+        component: () =>
+            import('src/pages/Contacts/ContactsPage.vue'),
+        name: 'contacts',
+    },
     {
         path: '/blog',
-        component: Blog,
+        component: () => import('src/pages/Blog/Blog.vue'),
         redirect: '/blog/main',
+        name: 'blog',
         children: [
             {
                 path: ':id',
-                component: BlogTypePage,
+                component: () =>
+                    import('src/pages/Blog/BlogTypePage.vue'),
                 name: 'BlogTypePage',
             },
             {
                 path: 'main',
-                component: BlogMainPage,
+                component: () =>
+                    import('src/pages/Blog/BlogMainPage.vue'),
                 name: 'BlogMainPage',
             },
         ],
     },
-    { path: '/questions', component: FAQPage },
-    { path: '/projects', component: ProjectPage },
-    { path: '/services', component: ServicesPage },
+    {
+        path: '/questions',
+        component: () => import('src/pages/FAQ/FAQPage.vue'),
+        name: 'faq',
+    },
+    {
+        path: '/projects',
+        component: () => import('src/pages/Projects/Project.vue'),
+        name: 'projects',
+        children: [
+            {
+                path: ':id',
+                component: () =>
+                    import('src/pages/Projects/ProjectTypePage.vue'),
+                name: 'ProjectTypePage',
+            },
+            {
+                path: 'main',
+                component: () =>
+                    import('src/pages/Projects/ProjectMainPage.vue'),
+                name: 'ProjectsMainPage',
+            },
+        ],
+    },
+    {
+        path: '/services',
+        component: () =>
+            import('src/pages/Services/ServicesPage.vue'),
+        name: 'services',
+    },
     {
         path: '/news',
-        component: News,
+        component: () => import('src/pages/News/News.vue'),
         redirect: '/news/main',
+        name: 'news',
         children: [
             {
                 path: 'main',
-                component: NewsMainPage,
+                component: () =>
+                    import('src/pages/News/NewsMainPage.vue'),
                 name: 'NewsMainPage',
             },
             {
                 path: ':id',
-                component: NewsTypePage,
+                component: () =>
+                    import('src/pages/News/NewsTypePage.vue'),
                 name: 'NewsTypePage',
             },
         ],

@@ -1,0 +1,7 @@
+export { default as MainHero } from './MainHero.vue'
+export { default as MainServices } from './MainServices.vue'
+export { default as MainProjects } from './MainProjects.vue'
+export { default as MainNews } from './MainNews.vue'
+export { default as MainFaq } from './MainFaq.vue'
+export { default as MainDescription } from './MainDescription.vue'
+export { default as MainBlog } from './MainBlog.vue'

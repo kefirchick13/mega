@@ -3,7 +3,6 @@ import ServiceIconList from 'src/features/Services/components/ServiceIconList/Se
 import { ref } from 'vue'
 import { ServiceBlocks } from 'src/widgets'
 import { QBtn } from 'quasar'
-import arrowRight from '@/shared/assets/icons/arrow-right.svg'
 
 const list = ref([
     {

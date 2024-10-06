@@ -1,40 +1,39 @@
 <script setup lang="ts">
 import HeaderLogo from '../../../assets/icons/HeaderLogo.svg'
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
-console.log(route)
-const navLinks = [
-    { name: 'О компании', link: '/about' },
-    { name: 'Проекты', link: '/projects' },
-    { name: 'Услуги', link: '/services' },
-    { name: 'Новости', link: '/news' },
-    { name: 'Блог', link: '/blog' },
-    { name: 'Частые вопросы', link: '/questions' },
-    { name: 'Контакты', link: '/contacts' },
-]
+import DesktopNavigation from './components/DesktopNavigation.vue'
+import MobileNavigation from './components/MobileNavigation.vue'
 </script>
 <template>
     <header class="header">
-        <RouterLink to="/main">
+        <router-link class="hover:opacity-50 transition-all" to="/">
             <HeaderLogo />
-        </RouterLink>
-        <nav class="header-nav">
-            <div
-                v-for="link in navLinks"
-                class="header-nav__item"
-                :class="{
-                    active: route.path.includes(link.link),
-                }"
-            >
-                <RouterLink :to="link.link">
-                    {{ link.name }}
-                </RouterLink>
-            </div>
-            <div class="header_nav-item">8 966 378-95-98</div>
-        </nav>
+        </router-link>
+        <div class="desktop-nav">
+            <DesktopNavigation />
+        </div>
+        <div class="mobile-nav">
+            <MobileNavigation />
+        </div>
     </header>
 </template>
 <style>
 @import './style.css';
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-nav {
+    display: block;
+}
+
+@media (min-width: 1440px) {
+    .desktop-nav {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}
 </style>

@@ -2,7 +2,9 @@
 import { QBtn } from 'quasar'
 </script>
 <template>
-    <div class="flex w-full gap-[32px] py-[32px]">
+    <div
+        class="flex flex-col sm:flex-row w-full gap-[32px] py-[32px]"
+    >
         <div
             class="text-center flex-1 rounded-[16px] p-[24px] border border__grey-quarternary"
         >
