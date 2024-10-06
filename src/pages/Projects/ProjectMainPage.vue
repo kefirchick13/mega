@@ -110,14 +110,14 @@ const items = [
                 header="Блог"
                 :items="items"
                 :RouterLinkName="'BlogTypePage'"
-            ></Carousel>
+            />
             <div>
                 <QBtn
-                    :outline="true"
                     size="md"
                     class="normal-case text-center"
-                    >Весь блог<arrowRight class="ml-[8px]"
-                /></QBtn>
+                    outline
+                    >Весь блог <arrowRight class="ml-[8px]" />
+                </QBtn>
             </div>
         </div>
         <FeedBack />
