@@ -6,8 +6,9 @@ services:
             context: .
             dockerfile: Dockerfile
         restart: always
-        ports:
-            - '8080:80'
+        # Убрал проброс порта, так как Nginx будет проксировать
+        # ports:
+        #     - '8080:80'
         networks:
             - web
         environment:
