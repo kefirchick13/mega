@@ -16,6 +16,7 @@ import ServicesTypePageVue from 'src/pages/Services/ServicesTypePage.vue'
 import NewsVue from 'src/pages/News/News.vue'
 import NewsMainPageVue from 'src/pages/News/NewsMainPage.vue'
 import NewsTypePageVue from 'src/pages/News/NewsTypePage.vue'
+
 const routes = [
     {
         path: '/',
@@ -116,4 +117,7 @@ const routes = [
 export const router = createRouter({
     history: createWebHistory(),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+        return { top: 0 }
+    },
 })

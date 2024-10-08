@@ -110,9 +110,11 @@ const items = [
             </p>
             <div>
                 <QBtn
+                    @click="() => $router.push('/services/create')"
                     :outline="true"
                     size="md"
                     class="normal-case text-center"
+                    style="width: 100%"
                     >Проконсультироваться по услугам<arrowRight
                         class="ml-[8px]"
                 /></QBtn>
@@ -127,6 +129,7 @@ const items = [
             ></Carousel>
             <div>
                 <QBtn
+                    @click="() => $router.push('/blog')"
                     :outline="true"
                     size="md"
                     class="normal-case text-center"

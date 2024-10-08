@@ -5,6 +5,7 @@
     >
         <div
             class="row-span-1 col-span-2 bg__secondary p-[24px] overflow-hidden"
+            @click="() => $router.push('/services/create')"
         >
             <h3>Сантехнические работы</h3>
             <img
@@ -19,6 +20,7 @@
         </div>
         <div
             class="row-span-1 col-span-2 bg__secondary p-[24px] overflow-hidden"
+            @click="() => $router.push('/services/create')"
         >
             <h3>Электромонтажные работы</h3>
             <img
@@ -33,6 +35,7 @@
         </div>
         <div
             class="row-span-1 col-span-2 bg__secondary p-[24px] overflow-hidden"
+            @click="() => $router.push('/services/create')"
         >
             <h3>Вентиляция и отопление</h3>
             <img
@@ -47,6 +50,7 @@
         </div>
         <div
             class="row-span-1 col-span-2 sm:col-span-3 bg__secondary p-[24px] overflow-hidden"
+            @click="() => $router.push('/services/create')"
         >
             <h3>Проектирование и планирование</h3>
             <img
@@ -61,6 +65,7 @@
         </div>
         <div
             class="sm:row-span-1 col-span-2 sm:col-span-3 bg__secondary p-[24px] overflow-hidden"
+            @click="() => $router.push('/services/create')"
         >
             <h3>Капитальный ремонт</h3>
             <img
@@ -84,6 +89,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    cursor: pointer;
 }
 
 .service-container h3 {
@@ -91,6 +97,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 100%;
 }
 
 @media (min-width: 640px) {

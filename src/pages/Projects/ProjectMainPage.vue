@@ -115,6 +115,7 @@ const items = [
             />
             <div>
                 <QBtn
+                    @click="() => $router.push('/blog')"
                     size="md"
                     class="normal-case text-center"
                     outline

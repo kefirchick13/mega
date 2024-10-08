@@ -52,12 +52,12 @@ const answers = [
         <div>
             <h1>Частые вопросы</h1>
         </div>
-        <div class="flex flex-row gap-[32px]">
+        <div class="flex sm:flex-row gap-[32px]">
             <FAQCategories class="static" />
             <AnswerBlocks
                 :answers="answers"
                 style="height: 80vh"
-                class="flex-1 overflow-y-scroll"
+                class="sm:flex-1 overflow-y-scroll"
             />
         </div>
     </div>

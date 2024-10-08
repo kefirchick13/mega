@@ -115,7 +115,9 @@ const items = [
                     ваших объектов в хорошем состоянии.
                 </p>
             </div>
-            <div class="flex items-center justify-between">
+            <div
+                class="flex items-center sm:justify-between gap-[16px]"
+            >
                 <div class="flex items-center gap-[16px]">
                     <QBtn>На карте</QBtn>
                     <QBtnDropdown

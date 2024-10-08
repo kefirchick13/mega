@@ -6,25 +6,25 @@ interface Ilink {
 }
 
 const companyArray = ref<Ilink[]>([
-    { name: 'История', link: '/story' },
-    { name: 'Миссия', link: '/story' },
-    { name: 'Статистика', link: '/story' },
-    { name: 'Контакты', link: '/story' },
-    { name: 'Вакансии', link: '/story' },
-    { name: 'Политика конфиденциальности', link: '/story' },
-    { name: 'Публичная оферта', link: '/story' },
+    { name: 'История', link: '/about' },
+    { name: 'Миссия', link: '/about' },
+    { name: 'Статистика', link: '/about' },
+    { name: 'Контакты', link: '/contacts' },
+    { name: 'Вакансии', link: '/about' },
+    { name: 'Политика конфиденциальности', link: '/policy' },
+    { name: 'Публичная оферта', link: '/policy' },
 ])
 
 const projects = ref<Ilink[]>([
-    { name: 'Остоженка 25', link: '/story' },
-    { name: 'Коробейников 18', link: '/story' },
-    { name: 'Бакинская 26', link: '/story' },
-    { name: 'Контакты', link: '/story' },
-    { name: 'Верейская 5', link: '/story' },
-    { name: 'Университетская 2', link: '/story' },
-    { name: 'Часовая 21 Б', link: '/story' },
-    { name: 'Плотников 2/8', link: '/story' },
-    { name: 'Нахимовский 47', link: '/story' },
+    { name: 'Остоженка 25', link: '/projects' },
+    { name: 'Коробейников 18', link: '/projects' },
+    { name: 'Бакинская 26', link: '/projects' },
+    { name: 'Контакты', link: '/projects' },
+    { name: 'Верейская 5', link: '/projects' },
+    { name: 'Университетская 2', link: '/projects' },
+    { name: 'Часовая 21 Б', link: '/projects' },
+    { name: 'Плотников 2/8', link: '/projects' },
+    { name: 'Нахимовский 47', link: '/projects' },
 ])
 
 const socialLinks = ref<Ilink[]>([

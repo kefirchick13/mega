@@ -12,7 +12,7 @@ const activeIndex = ref(0)
 const props = defineProps<{ tabs: items[] }>()
 </script>
 <template>
-    <div class="flex gap-[32px] flex-nowrap">
+    <div class="flex gap-[32px] sm:flex-nowrap">
         <div class="flex flex-col items-start min-w-[448px]">
             <h4
                 v-for="(data, index) in tabs"
