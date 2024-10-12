@@ -21,7 +21,7 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
                 <ArrowRight class="ml-[8px]" />
             </QBtn>
         </article>
-        <div class="container__image">
+        <div class="container__image ">
             <img src="" alt="" class="rounded-[16px] bg__secondary" />
         </div>
     </div>
@@ -29,6 +29,7 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 <style scoped>
 .container-block {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap:32px;
 }
@@ -52,13 +53,22 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 }
 
 .container__image {
-    display: none;
-}
+        display: block;
+        flex-basis: 100%;
+        flex-shrink: 1;
+        min-height: 344px;
+    }
+
+.container__image img {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color--grey-25);
+    }
 
 @media (min-width: 1024px) {
-    .container {
+    .container-block {
         display: flex;
-        flex-direction: row;
+        flex-wrap: nowrap;
         gap: 32px;
         width: 100%;
         justify-content: space-between;
@@ -83,10 +93,6 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
         min-height: 344px;
     }
 
-    .container__image img {
-        width: 100%;
-        height: 100%;
-        background-color: var(--color--grey-25);
-    }
+  
 }
 </style>
