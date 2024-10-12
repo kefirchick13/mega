@@ -18,6 +18,6 @@ const route = useRoute()
                 {{ link.name }}
             </router-link>
         </div>
-        <p class="header_nav-item">8 966 378-95-98</p>
+        <p class="header_nav-item mb-[0px]">8 966 378-95-98</p>
     </nav>
 </template>
