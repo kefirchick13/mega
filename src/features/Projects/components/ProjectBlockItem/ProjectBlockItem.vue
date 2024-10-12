@@ -25,7 +25,7 @@ const props = defineProps<IProps>()
             <div>
                 <h4 class="mb-[8px]">{{ project.name }}</h4>
                 <p
-                    class="truncate sm:max-w-[420px] max-w-[280px] text__light-secondary"
+                    class="truncate sm:max-w-[420px] md:max-w-[640px] xl:max-w-[320px] max-w-[280px] text__light-secondary"
                 >
                     {{ project.description }}
                 </p>

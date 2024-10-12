@@ -110,15 +110,12 @@ const isEvenRow = (rowIndex: number) => rowIndex % 2 === 1
 </template>
 
 <style scoped>
-@media (min-width: 640px) {
+@media (min-width: 1280px) {
     .table {
-        width: 1408px;
-        overflow: hidden;
-        overflow-x: auto;
+     width: 100%;
     }
-
     .row {
-        width: 1408px;
+        width: 100%;
         display: flex;
         flex-wrap: nowrap !important;
         flex: 0 1 auto; /* Без возможности роста, с уменьшением, базовый размер — по содержимому */
@@ -133,7 +130,6 @@ const isEvenRow = (rowIndex: number) => rowIndex % 2 === 1
 }
 
 .row {
-    display: flex;
     flex: 0 1 auto; /* Без возможности роста, с уменьшением, базовый размер — по содержимому */
     gap: 32px;
 }

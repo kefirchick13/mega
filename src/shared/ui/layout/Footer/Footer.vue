@@ -38,51 +38,51 @@ const news = ref<Ilink[]>([
 ])
 </script>
 <template>
-    <div class="flex lg:flex-row flex-col-reverse gap-[32px] flex-nowrap py-[32px] px-[20px] t">
-        <div class="columns flex flex-col  sm:flex-row flex-nowrap flex-1 gap-[32px]">
-            <div class="flex flex-col items-center sm:items-start">
+    <div class="flex lg:flex-row flex-col-reverse gap-[32px] flex-nowrap py-[32px] px-[20px] ">
+        <div class="columns flex flex-col sm:flex-row flex-nowrap gap-[32px] sm:items-start links-container flex-1">
+            <div class="flex flex-col column-text w-full ">
                 <p>Компания</p>
                 <RouterLink
                     v-for="item in companyArray"
                     :to="item.link"
                     class="text__light-secondary max-w-[148px] truncate pb-[16px]"
                 >
-                    <span>{{ item.name }}</span>
+                    <span class=" truncate">{{ item.name }}</span>
                 </RouterLink>
             </div>
-            <div class="flex flex-col items-center sm:items-start">
+            <div class="flex flex-col column-text">
                 <p>Проекты</p>
                 <RouterLink
                     v-for="item in projects"
                     :to="item.link"
-                    class="text__light-secondary max-w-[148px] truncate pb-[16px]"
+                    class="text__light-secondary  max-w-[148px] truncate pb-[16px]"
                     :item="item.name"
                 >
-                    <span>{{ item.name }}</span>
+                    <span class=" truncate">{{ item.name }}</span>
                 </RouterLink>
             </div>
-            <div class="flex flex-col items-center sm:items-start">
-                <p class="text-nowrap">Социальные сети</p>
+            <div class="flex flex-col column-text">
+                <p class="text-nowrap truncate">Социальные сети</p>
                 <RouterLink
                     v-for="item in socialLinks"
                     :to="item.link"
-                    class="text__light-secondary max-w-[148px] truncate pb-[16px]"
+                    class="text__light-secondary  max-w-[148px] truncate pb-[16px]"
                 >
-                    <span>{{ item.name }}</span>
+                    <span class=" truncate">{{ item.name }}</span>
                 </RouterLink>
             </div>
-            <div class="flex flex-col items-center sm:items-start">
+            <div class="flex flex-col column-text">
                 <p>Пресса</p>
                 <RouterLink
                     v-for="item in news"
                     :to="item.link"
                     class="text__light-secondary max-w-[148px] truncate pb-[16px]"
                 >
-                    <span>{{ item.name }}</span>
+                    <span class=" truncate">{{ item.name }}</span>
                 </RouterLink>
             </div>
         </div>
-        <div>
+        <div class="container-width flex-1">
             <p class="text__light-secondary ">
                 Все права на публикуемые на сайте megaconstructing.ru
                 материалы принадлежат ООО «МЕГА» © 2023 — 2024.
@@ -109,3 +109,35 @@ const news = ref<Ilink[]>([
         </div>
     </div>
 </template>
+<style scoped>
+.column-text{
+    align-items: center;
+    max-width: 148px;
+}
+.links-container{
+    max-width: 100%;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .links-container{
+    max-width: calc(50% - 16px);
+   
+}
+}
+@media (min-width: 640px) {
+    .column-text{
+    align-items: start;
+    max-width: 20%;
+    }
+    .column-text p, a, span{
+        max-width: 100%;
+    }
+    .links-container{
+    align-items: flex-start;
+    }
+
+}
+
+
+</style>

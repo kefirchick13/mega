@@ -3,7 +3,7 @@ import { QBtn } from 'quasar'
 import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
 </script>
 <template>
-    <div class="container py-[32px] mx-auto xl:mx-[0px]">
+    <div class="container-block py-[32px] mx-auto lg:mx-[0px]">
         <article class="container__article">
             <h1
                 class="text-[32px] leading-[42px] sm:leading-[64px] sm:text-[48px] text-center"
@@ -16,7 +16,7 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
                 обеспечиваем надежное поддержание ваших объектов в
                 хорошем состоянии.`
             </p>
-            <QBtn outline class="main-page__btn" size="md">
+            <QBtn outline class="main-page__btn" size="md" style="font-size: 16px;">
                 Проконсультироваться по проекту
                 <ArrowRight class="ml-[8px]" />
             </QBtn>
@@ -27,9 +27,10 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
     </div>
 </template>
 <style scoped>
-.container {
-    flex-direction: column;
-    justify-content: center;
+.container-block {
+    display: flex;
+    justify-content: space-between;
+    gap:32px;
 }
 
 .contaier .main-page__btn {
@@ -72,7 +73,7 @@ import ArrowRight from '@/shared/assets/icons/arrow-right.svg'
     }
 
     .main-page__btn {
-        max-width: 380px;
+        max-width: fit-content;
     }
 
     .container__image {

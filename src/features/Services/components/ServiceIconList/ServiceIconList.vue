@@ -50,7 +50,7 @@ onMounted(() => {
             <!-- Обертка слайдов -->
             <div
                 ref="carouselContainer"
-                class="flex flex-nowrap overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth"
+                class="flex flex-nowrap gap-[32px] overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth"
             >
                 <!-- Слайды -->
                 <div

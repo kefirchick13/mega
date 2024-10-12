@@ -13,7 +13,7 @@ import {
         class="flex items-center gap-[16px] w-full justify-between mb-[48px]"
     >
         <div class="flex items-center gap-[16px]">
-            <QBtn>На карте</QBtn>
+            <QBtn style="background-color: var(--color--grey-25);">На карте</QBtn>
             <QBtnDropdown
                 outline
                 label="Сектор"

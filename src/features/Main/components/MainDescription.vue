@@ -9,12 +9,12 @@
             оптимальные решения и тщательно контролирует все этапы
             работ.
         </h2>
-        <div class="flex flex-nowrap items-center gap-[10px]">
+        <div class="flex flex-nowrap items-center gap-[16px]">
             <div
                 class="bg__secondary shrink-0 rounded-full h-[64px] w-[64px]"
             ></div>
             <div>
-                <p class="m-[0px] w-fit">Наталья Савостьянова</p>
+                <p class="mb-[8px] w-fit">Наталья Савостьянова</p>
                 <p
                     class="text__light-secondary m-[0px] w-fit text-start"
                 >

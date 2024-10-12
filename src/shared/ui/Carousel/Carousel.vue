@@ -71,7 +71,7 @@ const prev = () => {
         </div>
         <div class="overflow-hidden w-full">
             <div
-                class="flex no-wrap transition-transform duration-300 carousel lg:gap-[20px]"
+                class="flex no-wrap transition-transform duration-300 carousel lg:gap-[32px]"
                 :style="{
                     transform: `translateX(-${currentSlide * (100 / visibleSlides)}%)`,
                 }"
@@ -81,7 +81,7 @@ const prev = () => {
                     :key="index"
                     class="flex-shrink-0 carousel-item flex flex-col h-full relative block"
                     :style="{
-                        width: `calc((100% - ${displayWidth <= 1024 ? 0 : 40}px) / ${visibleSlides})`,
+                        width: `calc((100% - ${displayWidth <= 1024 ? 0 : 64}px) / ${visibleSlides})`,
                     }"
                 >
                     <RouterLink
@@ -93,7 +93,7 @@ const prev = () => {
                         <img
                             :src="project.img || ''"
                             alt=""
-                            class="bg__secondary rounded-[16px] h-full relative flex-1 mb-[16px]"
+                            class="bg__secondary rounded-[16px] h-full relative flex-1 w-full mb-[16px]"
                         />
                         <div>
                             <h4 class="mb-[8px]">

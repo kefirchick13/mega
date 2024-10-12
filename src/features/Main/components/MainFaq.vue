@@ -15,9 +15,13 @@ import arrowRight from '@/shared/assets/icons/arrow-right.svg'
             </h2>
             <AnswerBlocks :answers="answers" />
         </div>
-        <QBtn :outline="true" size="md" class="normal-case"
-            >Больше ответов
+        <div
+        class="w-full text-center flex flex-col sm:flex-row justify-center"
+    >
+        <QBtn :outline="true" size="md" class="normal-case" >
+            Больше ответов
             <arrowRight class="ml-[8px]" />
         </QBtn>
+        </div>
     </div>
 </template>

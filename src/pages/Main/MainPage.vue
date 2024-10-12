@@ -13,7 +13,7 @@ import { FeedBack } from 'src/widgets'
 </script>
 
 <template>
-    <div class="w-full px-[20px] max-w-[1408px] mx-auto">
+    <div class="w-full px-[20px] max-w-[1408px] mx-auto lg:mx-[0px]">
         <MainHero />
         <MainServices />
         <MainProjects />

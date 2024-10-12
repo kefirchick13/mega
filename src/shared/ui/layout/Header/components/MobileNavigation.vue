@@ -27,7 +27,7 @@ const toggleMenu = () => (isMenuOpened.value = !isMenuOpened.value)
                         class="text-center text-[32px] hover:opacity-50 transition-all"
                         @click="toggleMenu"
                     >
-                        <router-link :to="navLink.link">
+                        <router-link :to="navLink.link" class="text-[32px]">
                             {{ navLink.name }}
                         </router-link>
                     </li>
