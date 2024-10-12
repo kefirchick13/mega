@@ -5,7 +5,8 @@ import arrowRight from '@/shared/assets/icons/arrow-right.svg'
 </script>
 
 <template>
-    <h2 class="mb-[48px] mt-[32px]">Наши услуги</h2>
+    <div class="py-[32px]">
+    <h2 class="mb-[48px] ">Наши услуги</h2>
     <ServicesScreen />
     <div
         class="w-full text-center flex flex-col sm:flex-row justify-center"
@@ -19,4 +20,5 @@ import arrowRight from '@/shared/assets/icons/arrow-right.svg'
             <arrowRight class="ml-[8px]" />
         </QBtn>
     </div>
+</div>
 </template>
